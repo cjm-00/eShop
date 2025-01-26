@@ -1,0 +1,52 @@
+@use "../../scss/colors.scss" as colors;
+@use "../../scss/fonts.scss" as fonts;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid colors.$mossy-gold;
+
+  .image {
+    width: 100px;
+  }
+
+  .details {
+    font-family: "Noto";
+    text-align: right;
+    a {
+      text-decoration: none;
+      color: colors.$mossy-gold;
+    }
+    .name {
+      margin: auto;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .price {
+      margin: auto;
+      font-weight: 400;
+    }
+
+    .qtyContainer {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      .qty {
+        margin: auto;
+        font-weight: 400;
+      }
+      .qtyInput {
+        width: 35px;
+        background-color: colors.$crowshead;
+        border: 1px solid colors.$mossy-gold;
+        color: colors.$mossy-gold;
+        text-align: center;
+        font-size: 1em;
+      }
+    }
+  }
+}

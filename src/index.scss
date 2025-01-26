@@ -1,0 +1,6 @@
+@use "./scss/colors.scss" as colors;
+
+:root {
+  color: colors.$mossy-gold;
+  background-color: colors.$crowshead;
+}

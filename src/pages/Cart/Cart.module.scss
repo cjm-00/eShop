@@ -1,0 +1,21 @@
+@use "../../scss/colors.scss" as colors;
+@use "../../scss/fonts.scss" as fonts;
+
+.title {
+  @include fonts.heading;
+  font-size: 1.6em;
+}
+
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  color: colors.$mossy-gold;
+  text-align: right;
+  font-size: 1.4em;
+  font-weight: 450;
+  padding-right: 60px;
+  font-family: "Noto";
+}

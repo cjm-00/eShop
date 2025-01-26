@@ -1,0 +1,45 @@
+@use "../../scss/colors.scss" as colors;
+@use "../../scss/fonts.scss" as fonts;
+
+.details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Noto";
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .img {
+    width: 90%;
+    padding-top: 7px;
+  }
+  .name {
+    font-family: "Morph";
+    margin: 0%;
+    color: colors.$haute-couture;
+  }
+
+  .price {
+    margin: 0%;
+    color: colors.$mossy-gold;
+  }
+
+  .brand {
+    margin: 0%;
+    color: colors.$mossy-gold;
+  }
+  .description {
+    margin: 0%;
+  }
+  .showBtn {
+    background-color: colors.$crowshead;
+    border: none;
+    color: colors.$haute-couture;
+    margin: 0%;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
