@@ -1,6 +1,6 @@
 import classes from "./CartItem.module.scss";
 import junith from "../../assets/JunithEruita.jpg";
-const CartItem = () => {
+const CartItem = ({ data }) => {
   return (
     <>
       <div className={classes.container}>
@@ -16,7 +16,6 @@ const CartItem = () => {
             <h3 className={classes.qty}>QTY: </h3>
             <input className={classes.qtyInput} type="text" />
           </div>
-
         </div>
       </div>
     </>

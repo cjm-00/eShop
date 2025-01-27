@@ -16,9 +16,11 @@
     padding-top: 7px;
   }
   .name {
-    font-family: "Morph";
+    font-family: "Noto";
     margin: 0%;
-    color: colors.$haute-couture;
+    color: colors.$mossy-gold;
+
+    text-align: center;
   }
 
   .price {
@@ -31,8 +33,29 @@
     color: colors.$mossy-gold;
   }
   .description {
+    color: colors.$mossy-gold;
+
     margin: 0%;
   }
+  .cartBtn {
+    background-color: colors.$haute-couture;
+    border: none;
+    color: colors.$whitecap;
+    margin: 0%;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:hover {
+      background-color: #631c1d;
+      transform: scale(1.04);
+    }
+  }
+
   .showBtn {
     background-color: colors.$crowshead;
     border: none;
@@ -40,6 +63,5 @@
     margin: 0%;
     font-size: 0.9em;
     font-weight: 600;
-    text-decoration: underline;
   }
 }

@@ -3,13 +3,12 @@
 
 .card {
   width: 130px;
-  height: 180px;
+  height: 190px;
   background-color: colors.$crowshead;
   font-family: "Noto";
   display: flex;
   flex-direction: column;
   padding: 6px;
-  justify-content: space-between;
 
   a {
     .photo {
@@ -22,7 +21,7 @@
       color: colors.$whitecap;
       font-size: 0.75em;
       margin: 0px;
-      margin-top: 5px;
+      margin-top: 0px;
       font-weight: 500;
     }
     .price {

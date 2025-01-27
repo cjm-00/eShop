@@ -24,4 +24,10 @@
 - path routing to each page
 - created links between pages
 
-### 26-01-25
+### 27-01-25
+
+- Filled out database
+- Coded service to pull data from database and clean data
+- updated cards to use pulled data
+- updated routing to product page for dynamic urls based on id
+- updated product page to use pulled data
