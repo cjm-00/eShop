@@ -31,3 +31,7 @@
 - updated cards to use pulled data
 - updated routing to product page for dynamic urls based on id
 - updated product page to use pulled data
+- created cart context provider
+- created add to cart function
+- updated page routing to use link to prevent cart context resetting
+- created logic to increase qty in cart if item already in cart

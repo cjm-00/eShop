@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import ProductDetails from "./ProductDetails";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getProducts } from "../../services/product-services";
+import { CartContext } from "../../context/CartContext";
 
 const ProductPage = () => {
   const [productData, setProductData] = useState([]);

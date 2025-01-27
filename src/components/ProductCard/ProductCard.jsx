@@ -1,13 +1,14 @@
 import classes from "./ProductCard.module.scss";
 import junith from "../../assets/JunithEruita.jpg";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
   return (
     <>
       <div className={classes.card}>
-        <a href={`/product/${data.id}`}>
+        <Link to={`/product/${data.id}`}>
           <img className={classes.photo} src={data.imageUrl} />
-        </a>
+        </Link>
         <div className={classes.details}>
           <h2 className={classes.name}>{data.name}</h2>
           <h3 className={classes.price}>${data.price.toFixed(2)}</h3>

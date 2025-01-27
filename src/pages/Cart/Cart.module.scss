@@ -19,3 +19,18 @@
   padding-right: 60px;
   font-family: "Noto";
 }
+
+.clear {
+  background-color: colors.$crowshead;
+  border: 2px solid colors.$mossy-gold;
+  color: colors.$mossy-gold;
+  height: 40px;
+  width: 100px;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Noto";
+  align-self: center;
+  &:hover {
+    transform: scale(1.03);
+  }
+}

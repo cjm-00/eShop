@@ -1,17 +1,18 @@
 import classes from "./Header.module.scss";
 import cartIcon from "../../assets/cartRed.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <div className={classes.cartContainer}>
-        <a href="/cart">
+        <Link to="/cart">
           <img className={classes.cartIcon} src={cartIcon} />
-        </a>
+        </Link>
       </div>
-      <a href="/">
+      <Link to="/">
         <h1 className={classes.heading}>WARHAMMER</h1>
-      </a>
+      </Link>
     </>
   );
 };
