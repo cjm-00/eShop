@@ -1,5 +1,6 @@
 @use "../../scss/colors.scss" as colors;
 @use "../../scss/fonts.scss" as fonts;
+@use "../../scss/screen.scss" as screen;
 
 .cartContainer {
   display: flex;
@@ -9,6 +10,16 @@
     padding-right: 14px;
     padding-top: 8px;
     margin: 0px;
+    @include screen.tablet {
+      width: 60px;
+      padding-right: 34px;
+      padding-top: 18px;
+    }
+    @include screen.desktop {
+      width: 60px;
+      padding-right: 50px;
+      padding-top: 20px;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -23,4 +34,10 @@ a {
 .heading {
   @include fonts.heading;
   text-shadow: 2px 2px 2px black;
+  @include screen.tablet {
+    font-size: 3em;
+  }
+  @include screen.desktop {
+    font-size: 4em;
+  }
 }

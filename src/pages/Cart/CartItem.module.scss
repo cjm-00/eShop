@@ -1,5 +1,6 @@
 @use "../../scss/colors.scss" as colors;
 @use "../../scss/fonts.scss" as fonts;
+@use "../../scss/screen.scss" as screen;
 
 .container {
   display: flex;
@@ -9,9 +10,23 @@
   padding-top: 30px;
   padding-bottom: 15px;
   border-bottom: 1px solid colors.$mossy-gold;
+  @include screen.tablet {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  @include screen.desktop {
+    width: 50%;
+    align-self: center;
+  }
 
   .image {
     width: 100px;
+    @include screen.tablet {
+      width: 140px;
+    }
+    @include screen.desktop {
+      width: 200px;
+    }
   }
 
   .details {
@@ -25,10 +40,22 @@
       margin: auto;
       font-weight: 600;
       text-decoration: none;
+      @include screen.tablet {
+        font-size: 1.4em;
+      }
+      @include screen.desktop {
+        font-size: 1.6em;
+      }
     }
     .price {
       margin: auto;
       font-weight: 400;
+      @include screen.tablet {
+        font-size: 1.3em;
+      }
+      @include screen.desktop {
+        font-size: 1.5em;
+      }
     }
 
     .qtyContainer {
@@ -38,6 +65,10 @@
       .qty {
         margin: auto;
         font-weight: 400;
+
+        @include screen.tablet {
+          font-size: 1.3em;
+        }
       }
       .qtyInput {
         width: 35px;
@@ -46,6 +77,39 @@
         color: colors.$mossy-gold;
         text-align: center;
         font-size: 1em;
+        margin: 0px;
+        @include screen.tablet {
+          font-size: 1.3em;
+        }
+      }
+      .qtyChange {
+        background-color: colors.$crowshead;
+        border: 1px solid colors.$mossy-gold;
+        color: colors.$mossy-gold;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 25px;
+      }
+    }
+    .remove {
+      background-color: colors.$mossy-gold;
+      border: 1px solid colors.$crowshead;
+      color: colors.$crowshead;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding: 5px;
+      margin-top: 8px;
+      font-weight: 600;
+      @include screen.tablet {
+        font-size: 1.1em;
+      }
+      @include screen.desktop {
+        font-size: 1.3em;
+        margin-top: 30px;
+      }
+      &:hover {
+        background-color: #867b5b;
+        transform: scale(1.03);
       }
     }
   }

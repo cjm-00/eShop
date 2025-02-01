@@ -1,0 +1,10 @@
+@use "../../scss/colors.scss" as colors;
+@use "../../scss/fonts.scss" as fonts;
+
+.loading {
+  text-align: center;
+  font-family: "Noto";
+  font-size: 1.3em;
+  margin-top: 50px;
+  color: colors.$haute-couture;
+}

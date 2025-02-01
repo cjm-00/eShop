@@ -1,0 +1,21 @@
+@use "../../scss/colors.scss" as colors;
+@use "../../scss/fonts.scss" as fonts;
+
+.carousel {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  .arrow {
+    background-color: colors.$crowshead;
+    border: 1px solid colors.$mossy-gold;
+    color: colors.$mossy-gold;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.7em;
+    height: 40px;
+  }
+
+  .productContainer {
+    display: flex;
+  }
+}

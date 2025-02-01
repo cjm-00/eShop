@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import ProductDetails from "./ProductDetails";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getProducts } from "../../services/product-services";
-import { CartContext } from "../../context/CartContext";
+import classes from "./ProductPage.module.scss";
 
 const ProductPage = () => {
   const [productData, setProductData] = useState([]);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -14,7 +15,6 @@ const ProductPage = () => {
   }, []);
 
   const productDetails = productData.find((entry) => entry.id === id);
-  console.log(productDetails);
 
   return (
     <>
@@ -22,7 +22,7 @@ const ProductPage = () => {
       {productDetails ? (
         <ProductDetails data={productDetails} />
       ) : (
-        <p>loading...</p>
+        <p className={classes.loading}>Loading...</p>
       )}
     </>
   );
