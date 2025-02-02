@@ -19,7 +19,8 @@ const CardContainer = () => {
   return (
     <>
       <div className={classes.carouselContainer}>
-        {/* <Carousel featuredProducts={featuredProducts} /> */}
+        <h2>Featured Products</h2>
+        <Carousel featuredProducts={featuredProducts} />
       </div>
       <div className={classes.container}>
         {productData.map((product) => (

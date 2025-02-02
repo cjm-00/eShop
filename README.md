@@ -35,3 +35,23 @@
 - created add to cart function
 - updated page routing to use link to prevent cart context resetting
 - created logic to increase qty in cart if item already in cart
+
+### 28-01-25
+
+- Updated add to cart logic to add cartPrice, tracking total price of qty above 1
+- Added total price logic
+
+### 01-01-25
+
+- Created database field for 'short' desc
+- Added logic to show short or long desc
+- Styling updates to cart and product page
+- Creating selection for product page variants
+- Styled pages for tablets and desktop
+- Added confirmation for cart empty
+- Created 'page not found' logic and page
+
+### 02-01-25
+
+- Created carousel styling
+- Created carousel logic
