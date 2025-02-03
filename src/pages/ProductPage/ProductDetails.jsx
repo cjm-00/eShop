@@ -7,6 +7,7 @@ const ProductDetails = ({ data }) => {
   const { cartList, updateCartList } = useContext(CartContext);
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedVariant, setSelectedVariant] = useState("");
+  const [currentStock, setCurrentStock] = useState(data.inStock);
 
   const addToCart = () => {
     if (
@@ -16,6 +17,7 @@ const ProductDetails = ({ data }) => {
       cartList.find((item) => item.product.id === data.id).qty++;
       cartList.find((item) => item.product.id === data.id).cartPrice =
         data.price * cartList.find((item) => item.product.id === data.id).qty;
+      setCurrentStock(currentStock - 1);
     } else {
       updateCartList([
         ...cartList,
@@ -26,12 +28,16 @@ const ProductDetails = ({ data }) => {
           cartVariant: selectedVariant,
         },
       ]);
+      setCurrentStock(currentStock - 1);
     }
   };
 
   useEffect(() => {
-    console.log(cartList);
-  }, [cartList]);
+    const item = cartList.find((item) => item.product.id === data.id);
+    if (item) {
+      setCurrentStock(currentStock - item.qty);
+    }
+  }, []);
 
   const showDesc = () => {
     setIsExpanded(!isExpanded);
@@ -61,11 +67,21 @@ const ProductDetails = ({ data }) => {
           ) : (
             ""
           )}
+          {currentStock > 0 ? (
+            <h4 className={classes.stock}>
+              Currently in Stock: {currentStock}
+            </h4>
+          ) : (
+            <h4 className={classes.noStock}>Out of Stock</h4>
+          )}
+          {currentStock > 0 ? (
+            <button className={classes.cartBtn} onClick={() => addToCart(data)}>
+              Add to Cart
+            </button>
+          ) : (
+            <button className={classes.disabledBtn}>Out of Stock</button>
+          )}
 
-          <h4 className={classes.stock}>Currently in Stock: {data.inStock}</h4>
-          <button className={classes.cartBtn} onClick={() => addToCart(data)}>
-            Add to Cart
-          </button>
           <p className={classes.description}>
             {isExpanded ? data.desc : data.short}
           </p>

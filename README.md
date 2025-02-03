@@ -55,3 +55,11 @@
 
 - Created carousel styling
 - Created carousel logic
+
+## 03-01-25
+
+- remove item from cart functionality
+- update qty from cart with increase and decrease functions
+- added disabled versions of add-to-cart and qty change buttons
+- added logic to respect stock limits
+- added logic to have cart qty effect stock on product page

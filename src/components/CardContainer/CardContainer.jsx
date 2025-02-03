@@ -19,9 +19,11 @@ const CardContainer = () => {
   return (
     <>
       <div className={classes.carouselContainer}>
-        <h2>Featured Products</h2>
+        <h2 className={classes.featuredTitle}>Featured Products</h2>
         <Carousel featuredProducts={featuredProducts} />
       </div>
+      <h2 className={classes.allTitle}>All Products</h2>
+
       <div className={classes.container}>
         {productData.map((product) => (
           <ProductCard key={product.id} data={product} />
